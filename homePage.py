@@ -102,18 +102,7 @@ while True:  # Outer loop for restarting the game
             # Draw welcome message
             welcome_text = font.render("Welcome to the Maze Game!", True, (0, 0, 0))
             screen.blit(welcome_text, (screen_width // 2 - welcome_text.get_width() // 2, screen_height // 5))
- 
-            # Draw instructions
-            # instructions_text1 = font.render("Instructions:", True, (255, 255, 255))
-            # screen.blit(instructions_text1, (screen_width // 2 - instructions_text1.get_width() // 2, screen_height // 3))
- 
-            # instructions_text2 = font.render("1. Click 'Play' to start the game.", True, (255, 255, 255))
-            # screen.blit(instructions_text2, (screen_width // 2 - instructions_text2.get_width() // 2, screen_height // 3 + 30))
- 
-            # instructions_text3 = font.render("2. Click 'Quit' to exit the game. !", True, (255, 255, 255))
-            # screen.blit(instructions_text3, (screen_width // 2 - instructions_text3.get_width() // 2, screen_height // 3 + 60))
- 
- 
+  
             # Draw the play again button
             pygame.draw.rect(screen, (0, 0, 0), play_button)  # Black background
             play_text = font.render("Play", True, (255, 255, 255))  # White text
@@ -148,6 +137,7 @@ while True:  # Outer loop for restarting the game
 ## pip install numpy
  
  
+
 ## add a button that opens up a page with instructions
 ## add comments and do the report
 
