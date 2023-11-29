@@ -1,6 +1,17 @@
 # Maze Game
 By: Adam Christopher & Gabriella Gindoff
 
+
+# Table of Contents
+
+1. [Project Goals](https://github.com/Gabi-Gindoff/MazeGame/blob/main/README.md#project-goals)
+2. [Significance of the Project](https://github.com/Gabi-Gindoff/MazeGame/blob/main/README.md#significance-of-the-project)
+3. [Installation and Usage Instructions](https://github.com/Gabi-Gindoff/MazeGame/blob/main/README.md#installation-and-usage-instructions)
+4. [Code Structure](https://github.com/Gabi-Gindoff/MazeGame/blob/main/README.md#code-structure)
+5. [List of Functionalities and Test Results](https://github.com/Gabi-Gindoff/MazeGame/blob/main/README.md#list-of-functionalities-and-test-results)
+6. [Discussion and Conclusions](https://github.com/Gabi-Gindoff/MazeGame/blob/main/README.md#discussion-and-conclusions)
+
+
 ## Project Goals
 
 The primary goal of the Maze Game project is to create an interactive and enjoyable gaming experience for users. Through maze navigation, package collection, and reaching the game's endpoint, users are immersed in a dynamic and challenging environment. A distinctive feature is the incorporation of packages, each revealing lighthearted jokes upon collection, with the aim of enhancing user happiness. This unique approach seeks to create a positive and uplifting atmosphere within the game, contributing to the creation of a safe space for players.
