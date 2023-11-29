@@ -9,20 +9,23 @@ The Maze Game contributes to Safe Space by providing an entertaining and lighthe
 
 ## Installation and Usage Instructions
 1. **Installation:**
-   - Ensure you have Python installed on your system.
+   - The entire application runs in Visual Studio / Visual Studio Code
+   - The application will **NOT** run in Google Codespaces or GitHub Codespaces due to pygame pop-ups not functioning correctly.
    - Install the required dependencies by running:
      ```
-     pip install pygame numpy
+     pip install -r mazeRequirements.txt
      ```
-   - Download the project files.
 
-2. **Usage:**
-   - Run the `homePage.py` script to launch the Maze Game.
-   - On the home page, use the arrow keys to navigate through the options.
+3. **Usage:**
+   - Run the `homePage.py` script to launch the starting menu for the game
+      ```
+      python homePage.py
+      ```
+   - For instructions on how to play, click on the "instructions" button after launching the menu
    - Press the "Play" button to start the game.
    - Collect yellow squares (packages) for jokes and navigate to the red square to complete the maze.
    - Press the space bar to reveal the shortest path.
-   - Press "Quit" to exit the application.
+   - Pressing "Quit" or reaching the red square will exit the application.
 
 ## Code Structure
 The project consists of three main Python scripts:
