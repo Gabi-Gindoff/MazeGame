@@ -36,37 +36,104 @@ In summary, the Maze Game contributes significantly to Safe Space by combining e
 
 
 
+
+
 ## Installation and Usage Instructions
-1. **Installation:**
-   - The entire application runs in Visual Studio / Visual Studio Code
-   - The application will **NOT** run in Google Codespaces or GitHub Codespaces due to pygame pop-ups not functioning correctly.
-   - Open a new terminal: this can be done by clicking View at the top of the screen and then clicking Terminal from the drop-down menu
-   - Use this command in the terminal to download and install the required dependencies:
+
+### Installation:
+
+1. **Install Visual Studio Code:**
+   - If you haven't installed Visual Studio Code, download and install it from the [official website](https://code.visualstudio.com/).
+
+2. **Open the Project in Visual Studio Code:**
+   - Clone or download the Maze Game project from the [GitHub repository](https://github.com/Gabi-Gindoff/MazeGame).
+
+3. **Open Visual Studio Code:**
+   - Launch Visual Studio Code on your computer.
+
+4. **Open the Project Folder:**
+   - Click on "File" in the top-left corner of Visual Studio Code.
+   - Select "Open Folder" and choose the folder where you cloned or downloaded the Maze Game project.
+
+
+### Install Dependencies:
+
+5. **Install Required Packages:**
+   - Open a new terminal in Visual Studio Code (you can do this by clicking on `View` at the top of the screen and then selecting `Terminal`).
+   - Run the following command in the terminal:
      ```
      pip install -r mazeRequirements.txt
      ```
 
-3. **Usage:**
-   - Run the `homePage.py` script to launch the starting menu for the game
-      ```
+   - Note: The entire application runs in Visual Studio / Visual Studio Code. It will **NOT** run in Google Collab or GitHub Codespaces due to pygame pop-ups not functioning correctly.
+
+### Usage:
+
+6. **Run the Game:**
+   - In Visual Studio Code, make sure you have the `homePage.py` file open.
+
+7. **Open a Terminal:**
+   - If you don't have the terminal open, you can do this by clicking `View` at the top of the screen and then selecting `Terminal` from the drop-down menu.
+
+8. **Run the `homePage.py` Script:**
+    - In the terminal, run the following command:
+      ```bash
       python homePage.py
       ```
-   - For instructions on how to play, click on the "instructions" button after launching the menu
-   - Press the "Play" button to start the game.
-   - Collect yellow squares (packages) for jokes and navigate to the red square to complete the maze.
-   - Press the space bar to reveal the shortest path.
-   - Pressing "Quit" or reaching the red square will exit the application.
+
+9. **Navigate the Game:**
+    - Follow the on-screen instructions.
+    - Click on the "instructions" button for details on how to play.
+
+10. **Enjoy the Maze Game:**
+    - Play the game by collecting yellow squares (packages) and reaching the red square to complete the maze.
+    - Press the space bar to reveal the shortest path.
+    - Have fun exploring and navigating the maze!
+
+11. **Exiting the Application:**
+    - Press "Quit" in the game interface or reach the red square to exit the application.
+
+
+
+
 
 ## Code Structure
-The project consists of three main Python scripts:
-1. **homePage.py:** Manages the game's home page, including buttons for playing, quitting, and accessing instructions.
-2. **maze.py:** Implements the maze generation, BFS pathfinding algorithm, and game logic for the user's movement and interaction with packages.
-3. **instructions.py:** Displays instructions on how to play the game.
 
-The code is structured with clear sections for Pygame setup, constants, maze generation, user input handling, and game loop. Each script serves a specific purpose, contributing to the overall functionality of the Maze Game.
+The Maze Game project is organized into a well-defined structure, comprising several key elements:
+
+```
+|-- MazeGame
+    |-- homePage.py
+    |-- maze.py
+    |-- instructions.py
+    |-- mazeRequirements.txt
+    |-- mazePic.jpeg
+    |-- README.md
+```
+
+
+1. **homePage.py:** This script serves as the control center for the game's home page. It manages buttons for initiating gameplay, exiting the application, and accessing instructions, providing users with a seamless interface.
+
+2. **maze.py:** Responsible for the core functionalities, this script implements maze generation, the Breadth-First Search (BFS) pathfinding algorithm, and game logic governing the user's movement and interaction with packages. It forms the backbone of the gaming experience.
+
+3. **instructions.py:** Dedicated to offering clear guidance, this script displays instructions on how to play the game. It ensures that users have a comprehensive understanding of the game mechanics and objectives.
+
+4. **mazeRequirements.txt:** This file consolidates all dependencies and installations required to run the application. It simplifies the setup process by providing a centralized list of prerequisites.
+
+5. **mazePic.jpeg:** A visual element, this image serves as the background for the game, enhancing the overall aesthetic appeal and user experience.
+
+6. **README.md:** The project report which includes project goals, significance, installation and usage instructions, code structure, functionalities, and discussion points. This comprehensive document acts as a guide and reference for users and collaborators.
+
+The codebase features clear sections for Pygame setup, constant definitions, maze generation algorithms, user input handling, and the game loop. Each script fulfills a specific role, collectively contributing to the seamless functionality and structure of the Maze Game.
+
+
+
+
 
 ## List of Functionalities and Test Results
+
 ### Functionalities:
+
 - **Home Page:**
   - Play Button: Initiates the game session.
   - Quit Button: Exits the application.
@@ -83,9 +150,52 @@ The code is structured with clear sections for Pygame setup, constants, maze gen
   - Displays game instructions.
   - Exit on any key press.
 
+- **Dependency Management:**
+  - **mazeRequirements.txt:** Lists and manages dependencies for seamless installation.
+    - Ensures the correct versions of required packages for smooth application functioning.
+
+
+### Overall Program Functionality:
+
+The Maze Game integrates various components to deliver a seamless and enjoyable user experience. The overall functionality encompasses the following aspects:
+
+1. **User Interface:**
+   - The home page provides clear navigation with buttons for playing, quitting, and accessing instructions.
+   - Interactive buttons enhance the user experience, ensuring intuitive and straightforward navigation.
+
+2. **Maze Generation and Navigation:**
+   - The maze generation algorithm creates dynamic and challenging mazes.
+   - Users can navigate through the maze using arrow keys, adding an element of strategy and skill to the game.
+
+3. **Package Collection and Humor Integration:**
+   - Yellow squares (packages) trigger jokes upon collection, enhancing user happiness and creating a lighthearted atmosphere.
+   - The incorporation of humor adds a therapeutic and enjoyable dimension to the gaming experience.
+
+4. **Shortest Path and Victory:**
+   - Pressing the space bar reveals the shortest path, aiding users in completing the maze efficiently.
+   - Victory conditions are met with a congratulatory message, providing a sense of accomplishment.
+
+5. **Instructions Page:**
+   - Clear and concise instructions ensure that users understand the game mechanics, contributing to a smooth and engaging experience.
+
+6. **Dependency Management:**
+   - The inclusion of the `mazeRequirements.txt` file simplifies the installation process, ensuring that the required dependencies are met.
+
+
 ### Test Results:
-- The game has been tested for functionality, including user movement, package collection, victory conditions, and pathfinding.
-- The instructions page has been tested for clarity and correctness.
+
+- **Functionality Testing:**
+  - **User Movement:** Verified arrow keys' responsiveness and accurate maze navigation.
+  - **Package Collection:** Ensured jokes triggered correctly upon collecting yellow squares.
+  - **Shortest Path:** Confirmed the space bar correctly revealed the shortest path.
+  - **Victory:** Checked congratulatory message appearance upon reaching the maze's end.
+  - **Dependency Management:** Validated the successful installation of dependencies using `mazeRequirements.txt`.
+
+- **Instructions Page Testing:**
+  - **Clarity:** Verified instructions for clear and understandable guidance.
+  - **Correctness:** Ensured that instructions accurately reflected game mechanics.
+
+The game underwent comprehensive testing to guarantee the functionality of key features, the accuracy of provided instructions, and successful dependency management. All tests were successful, confirming a reliable and enjoyable user experience.
 
 ## Discussion and Conclusions
 ### Project Issues and Limitations:
