@@ -50,6 +50,7 @@ for i, line in enumerate(instructions):
     text = font.render(line, True, BLACK)
     screen.blit(text, (WIDTH // 2 - text.get_width() // 2, HEIGHT // 4 + i * 25))
 
+# Update the pygame display
 pygame.display.flip()
 
 # Wait for any key press to exit the instruction screen
@@ -62,5 +63,6 @@ while waiting_for_key:
         elif event.type == pygame.KEYDOWN:
             waiting_for_key = False
 
+# Quit the application
 pygame.quit()
 sys.exit()
