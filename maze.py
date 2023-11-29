@@ -43,27 +43,41 @@ def generate_maze():
 
 # BFS algorithm to find the path
 def bfs(maze):
+    # Initialize visited array to keep track of visited cells
     visited = [[False for _ in range(COLS)] for _ in range(ROWS)]
+
+    # Initialize the queue with the starting point (0, 0) and an empty path
     queue = Queue()
     queue.put((0, 0, []))  # (row, col, path)
 
+    # Start the BFS traversal
     while not queue.empty():
+        # Get the current position and path from the queue
         row, col, path = queue.get()
-        if row == ROWS - 1 and col == COLS - 1:
-            return path
 
+        # Check if the current position is the destination
+        if row == ROWS - 1 and col == COLS - 1:
+            return path  # Return the path if the destination is reached
+
+        # Explore neighbors in all four directions (up, down, left, right)
         for dr, dc in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
             new_row, new_col = row + dr, col + dc
+
+            # Check if the new position is within the maze boundaries,
+            # not visited, and is a valid path (maze[new_row][new_col] == 0)
             if (
                 0 <= new_row < ROWS
                 and 0 <= new_col < COLS
                 and not visited[new_row][new_col]
                 and maze[new_row][new_col] == 0
             ):
+                # Add the new position to the queue with an updated path
                 queue.put((new_row, new_col, path + [(row, col)]))
+                # Mark the new position as visited
                 visited[new_row][new_col] = True
 
-    return None  # No path found
+    # If no path is found, return None
+    return None
 
 # Draw the maze
 def draw_maze(maze):
@@ -165,6 +179,7 @@ running = True  # Variable to control the main loop
 
 while running:
 
+    # Reveal BFS path on space bar press
     try:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -179,7 +194,7 @@ while running:
         keys = pygame.key.get_pressed()
         current_time = time.time()
 
-        # Add a delay between key presses to limit movement speed
+        # Add a delay between key presses to limit movement speed, no delay results in instant movements across the screen 
         if current_time - last_key_press_time > 0.1 and not victory:
             if keys[pygame.K_UP] and user_row > 0 and maze[user_row - 1][user_col] in [0, YELLOW]:
                 user_row -= 1
