@@ -1,4 +1,3 @@
-from ast import Try
 import pygame
 import sys
 import random
