@@ -134,29 +134,6 @@ The codebase features clear sections for Pygame setup, constant definitions, maz
 
 ### Functionalities:
 
-- **Home Page:**
-  - Play Button: Initiates the game session.
-  - Quit Button: Exits the application.
-  - Instructions Button: Displays instructions.
-
-- **Maze Game:**
-  - Maze Generation: Randomly generates a maze with packages.
-  - User Movement: Allows the user to navigate the maze using arrow keys.
-  - Package Collection: Triggers jokes upon collecting yellow squares.
-  - Shortest Path: Pressing the space bar reveals the shortest path.
-  - Victory: Displays a congratulatory message upon reaching the end.
-
-- **Instructions Page:**
-  - Displays game instructions.
-  - Exit on any key press.
-
-- **Dependency Management:**
-  - **mazeRequirements.txt:** Lists and manages dependencies for seamless installation.
-    - Ensures the correct versions of required packages for smooth application functioning.
-
-
-### Overall Program Functionality:
-
 The Maze Game integrates various components to deliver a seamless and enjoyable user experience. The overall functionality encompasses the following aspects:
 
 1. **User Interface:**
@@ -195,15 +172,44 @@ The Maze Game integrates various components to deliver a seamless and enjoyable 
   - **Clarity:** Verified instructions for clear and understandable guidance.
   - **Correctness:** Ensured that instructions accurately reflected game mechanics.
 
-The game underwent comprehensive testing to guarantee the functionality of key features, the accuracy of provided instructions, and successful dependency management. All tests were successful, confirming a reliable and enjoyable user experience.
+Adam and Gabi performed various testing to guarantee the functionality of key features, the accuracy of provided instructions, and successful dependency management. All tests were successful, confirming a reliable and enjoyable user experience.
+
+
+
 
 ## Discussion and Conclusions
+
 ### Project Issues and Limitations:
-- The game currently lacks a scoring system or a mechanism to track user progress beyond package collection.
-- The maze generation algorithm could be further optimized for more interesting and challenging mazes.
+
+- **Scoring System and Progress Tracking:**
+  - The absence of a scoring system limits the game's ability to provide users with a quantitative measure of their performance.
+  - Implementing a mechanism to track user progress beyond package collection could enhance engagement and motivation.
+
+- **Maze Generation Optimization:**
+  - While the current maze generation algorithm is functional, there is room for optimization to create more intricate and challenging mazes.
+  - Exploring advanced algorithms or tweaking parameters could contribute to a more diverse and engaging gaming experience.
+
+- **User Guidance:**
+  - The game lacks a tutorial or additional guidance for first-time users, which may affect the initial learning curve.
+  - Integrating a tutorial or hints system could improve the onboarding experience for new players.
 
 ### Application of Course Learnings:
-- The project incorporates principles of game development, including user input handling, maze generation, and pathfinding algorithms.
-- Python, Pygame, and basic software design concepts were applied to create a functional and entertaining game.
 
-Overall, the Maze Game provides a fun and interactive experience for users, contributing to Safe Space's mission of promoting mental well-being through engaging activities. The project also serves as a practical application of programming and game development concepts learned throughout the course.
+- **BFS Algorithm:**
+  - The Breadth-First Search (BFS) algorithm is a fundamental part of the Maze Game, used for finding the shortest path.
+  - Applying BFS showcases its practical utility in solving real-world problems, emphasizing its versatility in different domains.
+
+- **Problem Solving:**
+  - The project required systematic problem-solving skills, from maze generation to user navigation and humor integration.
+  - The iterative process of identifying issues, devising solutions, and refining the implementation mirrors real-world problem-solving scenarios.
+
+- **Python Programming:**
+  - The project extensively utilized Python for its simplicity, readability, and versatility.
+  - Writing clear and efficient code in Python contributes to the overall success of the project, demonstrating proficiency in the language.
+
+- **Logical and Critical Thinking:**
+  - Designing the game logic, including maze navigation, package collection, and humor integration, demanded logical and critical thinking.
+  - The ability to think critically and strategically is a valuable skill reinforced through the development process.
+
+
+In conclusion, the Maze Game project serves as a multifaceted learning experience, addressing both technical and problem-solving aspects. The identified issues present opportunities for future enhancements, and the application of course learnings highlights the practical and versatile nature of programming skills developed throughout the course. The project successfully aligns with the goals of Safe Space, providing an entertaining and educational tool for users.
