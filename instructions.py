@@ -37,9 +37,10 @@ instructions = [
     "1. Use arrow keys to navigate through the maze.",
     "2. Collect yellow squares (packages) for fun jokes.",
     "3. Reach the red square to complete the maze.",
-    "4. Click on the maze with your mouse to reveal the shortest path!",
-    "5. Have fun and enjoy the game!",
+    "4. Have fun and enjoy the game!",
     "",
+    "HINT: Press the space bar to reveal the shortest path!",
+    " ",
     "Press 'Play' on the home page to start the Maze Game.",
     "Press 'Quit' on the home page to exit the Application."
 ]
