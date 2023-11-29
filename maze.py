@@ -89,7 +89,7 @@ user_moved = False  # Flag to check if the user moved
 ai_path_revealed = False  # Flag to check if the AI path is revealed
 victory = False  # Flag to check if the user reached the red square
 last_key_press_time = time.time()
-
+packages_collected = 0  # Counter for the number of packages collected
 
 
 
@@ -169,11 +169,11 @@ while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-            elif event.type == pygame.MOUSEBUTTONDOWN and not ai_path_revealed:
-                # Click to reveal AI path
+            elif event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE and not ai_path_revealed:
+                # Space bar pressed to reveal AI path
                 ai_path_revealed = True
-            elif event.type == pygame.MOUSEBUTTONDOWN and ai_path_revealed:
-                # Click to hide AI path
+            elif event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE and ai_path_revealed:
+                # Space bar pressed to hide AI path
                 ai_path_revealed = False
 
         keys = pygame.key.get_pressed()
@@ -202,6 +202,8 @@ while running:
 
             # Check if the user reached a package (yellow square)
             if maze[user_row][user_col] == YELLOW:
+                # Counter for collected packages
+                packages_collected += 1
                 # Display a joke and answer on the screen
                 joke, answer = random.choice(jokes_and_answers)
                 joke_text = font.render(joke, True, RED)
@@ -267,26 +269,47 @@ while running:
         # Display victory message
         if victory:
             font = pygame.font.Font(None, 35)
-            message = "Congratulations! You reached the end!"
-    
-            # Create a background rectangle behind the victory message
-            text_width, text_height = font.size(message)
-            background_rect = pygame.Rect(
-                WIDTH // 2 - text_width // 2 - 10,
-                HEIGHT // 2 - text_height // 2 - 10,
-                text_width + 20,
-                text_height + 20
-            )
-            pygame.draw.rect(screen, WHITE, background_rect)
+            message_line1 = "Congratulations! You reached the end"
+            message_line2 = f"and collected {packages_collected} packages!"
 
-            # Draw the victory message text on top of the background rectangle
-            text = font.render(message, True, RED)
-            screen.blit(text, (WIDTH // 2 - text_width // 2, HEIGHT // 2 - text_height // 2))
+            # Calculate the size of each line
+            text1_width, text1_height = font.size(message_line1)
+            text2_width, text2_height = font.size(message_line2)
+
+            # Calculate the positions for each line
+            line1_position = (WIDTH // 2 - text1_width // 2, HEIGHT // 2 - text1_height - 10)
+            line2_position = (WIDTH // 2 - text2_width // 2, HEIGHT // 2 + 10)
+
+            # Create background rectangles behind the victory messages
+            background_rect1 = pygame.Rect(
+                line1_position[0] - 10,
+                line1_position[1] - 10,
+                text1_width + 20,
+                text1_height + 20
+            )
+
+            background_rect2 = pygame.Rect(
+                line2_position[0] - 10,
+                line2_position[1] - 10,
+                text2_width + 20,
+                text2_height + 20
+            )
+
+            pygame.draw.rect(screen, WHITE, background_rect1)
+            pygame.draw.rect(screen, WHITE, background_rect2)
+
+            # Draw the victory message text on top of the background rectangles
+            text1 = font.render(message_line1, True, RED)
+            text2 = font.render(message_line2, True, RED)
+
+            screen.blit(text1, line1_position)
+            screen.blit(text2, line2_position)
 
             pygame.display.flip()
 
             pygame.time.wait(2000)
             running = False
+
 
         pygame.display.flip()
 
