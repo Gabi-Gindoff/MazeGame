@@ -29,7 +29,8 @@ In summary, the Maze Game contributes significantly to Safe Space by combining e
 1. **Installation:**
    - The entire application runs in Visual Studio / Visual Studio Code
    - The application will **NOT** run in Google Codespaces or GitHub Codespaces due to pygame pop-ups not functioning correctly.
-   - Install the required dependencies by running:
+   - Open a new terminal: this can be done by clicking View at the top of the screen and then clicking Terminal from the drop-down menu
+   - Use this command in the terminal to download and install the required dependencies:
      ```
      pip install -r mazeRequirements.txt
      ```
