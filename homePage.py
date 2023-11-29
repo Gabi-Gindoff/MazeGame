@@ -1,11 +1,9 @@
 import numpy as np
 import pygame
 import sys
-import math
 import random
-import asyncio
 import subprocess
- 
+
 # Set up Pygame
 pygame.init()
  
