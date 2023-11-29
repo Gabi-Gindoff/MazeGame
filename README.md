@@ -162,11 +162,19 @@ The Maze Game integrates various components to deliver a seamless and enjoyable 
 ### Test Results:
 
 - **Functionality Testing:**
+  - **Buttons:** Verified that the buttons work correctly and lead to the proper pages.
+
+    <img width="300" alt="image" src="https://github.com/Gabi-Gindoff/MazeGame/assets/144366612/86f42c81-fee1-4396-b9d9-c100be3c2595">
   - **User Movement:** Verified arrow keys' responsiveness and accurate maze navigation.
+    <img width="451" alt="image" src="https://github.com/Gabi-Gindoff/MazeGame/assets/144366612/7c6d13f9-20e4-4b97-b62c-e999cda27e76">
   - **Package Collection:** Ensured jokes triggered correctly upon collecting yellow squares.
+    <img width="451" alt="image" src="https://github.com/Gabi-Gindoff/MazeGame/assets/144366612/1aaa066a-33d9-4a15-a63d-f9b8768e67b8">
   - **Shortest Path:** Confirmed the space bar correctly revealed the shortest path.
+    <img width="454" alt="image" src="https://github.com/Gabi-Gindoff/MazeGame/assets/144366612/3eec4ba9-7c5c-4cbf-9712-2a3c943a5df6">
+
+
   - **Victory:** Checked congratulatory message appearance upon reaching the maze's end.
-  - **Dependency Management:** Validated the successful installation of dependencies using `mazeRequirements.txt`.
+    <img width="452" alt="image" src="https://github.com/Gabi-Gindoff/MazeGame/assets/144366612/50922e21-db82-441f-b7e0-e44684c5105e">
 
 - **Instructions Page Testing:**
   - **Clarity:** Verified instructions for clear and understandable guidance.
