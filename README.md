@@ -2,7 +2,12 @@
 By: Adam Christopher & Gabriella Gindoff
 
 ## Project Goals
-The primary goal of the Maze Game project is to create an interactive and engaging game where users can navigate through a maze, collect packages, and reach the end goal. Additionally, the project aims to incorporate features such as displaying jokes upon collecting packages and providing an option to reveal the shortest path using the space bar.
+
+The primary goal of the Maze Game project is to create an interactive and enjoyable gaming experience for users. Through maze navigation, package collection, and reaching the game's endpoint, users are immersed in a dynamic and challenging environment. A distinctive feature is the incorporation of packages, each revealing lighthearted jokes upon collection, with the aim of enhancing user happiness. This unique approach seeks to create a positive and uplifting atmosphere within the game, contributing to the creation of a safe space for players.
+
+Furthermore, the project aspires to showcase the practical application of techniques and concepts learned in class throughout the software development process. Drawing on fundamental programming and software design principles, Python serves as the primary language, while the Pygame library facilitates graphical user interface development. The project employs data structures, such as queues for Breadth-First Search, demonstrating the application of class-learned algorithms. The incorporation of interactive buttons on the home page reflects the utilization of event-driven programming concepts. Emphasis is placed on user experience design, integrating principles learned in class for intuitive and visually appealing interfaces.
+
+In summary, the Maze Game project not only aims to provide entertainment but also serves as a tangible application of class-learned techniques and concepts in software development. Through this integration, the project seeks to reinforce programming principles and deliver an engaging and uplifting user experience.
 
 ## Significance of the Project
 The Maze Game contributes to Safe Space by providing an entertaining and lighthearted activity for users. Games can serve as a valuable tool for relaxation and stress relief, promoting mental well-being. Moreover, the incorporation of jokes in the game adds an element of humor, further enhancing the user experience and contributing positively to their mood.
