@@ -3,7 +3,7 @@ import pygame
 import sys
 import random
 import subprocess
-
+ 
 # Set up Pygame
 pygame.init()
  
@@ -76,8 +76,7 @@ while True:  # Outer loop for restarting the game
                         print("Play button clicked")
                         # Use subprocess to run twoplayer.py
                         subprocess.run(["python", "maze.py"])
-                        #pygame.quit()
-                        #subprocess.run(["python", "homePage.py"])
+
  
                     # Check if quit button is clicked on the home page
                     elif quit_button.collidepoint(event.pos):
@@ -100,7 +99,8 @@ while True:  # Outer loop for restarting the game
             # Draw welcome message
             welcome_text = font.render("Welcome to the Maze Game!", True, (0, 0, 0))
             screen.blit(welcome_text, (screen_width // 2 - welcome_text.get_width() // 2, screen_height // 5))
-  
+ 
+ 
             # Draw the play again button
             pygame.draw.rect(screen, (0, 0, 0), play_button)  # Black background
             play_text = font.render("Play", True, (255, 255, 255))  # White text
@@ -130,15 +130,3 @@ while True:  # Outer loop for restarting the game
     current_game_state = HOME_PAGE
 
  
- 
-## pip install pygame
-## pip install numpy
- 
- 
-
-## add a button that opens up a page with instructions
-## add comments and do the report
-
-## have user input how happy they are on a scale of 1-10 and give them a number of boxes to collect in order to win the game (cant finish until u collect them all)
-## happiness score depending on how many boxes they pick up
-
