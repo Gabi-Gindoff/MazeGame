@@ -16,20 +16,20 @@ By: Adam Christopher & Gabriella Gindoff
 
 The primary goal of the Maze Game project is to create an interactive and enjoyable gaming experience for users. Through maze navigation, package collection, and reaching the game's endpoint, users are immersed in a dynamic and challenging environment. A distinctive feature is the incorporation of packages, each revealing lighthearted jokes upon collection, with the aim of enhancing user happiness. This unique approach seeks to create a positive and uplifting atmosphere within the game, contributing to the creation of a safe space for players.
 
-Furthermore, the project aspires to showcase the practical application of techniques and concepts learned in class throughout the software development process. Drawing on fundamental programming and software design principles, Python serves as the primary language, while the Pygame library facilitates graphical user interface development. The project employs data structures, such as queues for Breadth-First Search, demonstrating the application of class-learned algorithms. The incorporation of interactive buttons on the home page reflects the utilization of event-driven programming concepts. Emphasis is placed on user experience design, integrating principles learned in class for intuitive and visually appealing interfaces.
+Furthermore, the project aims to showcase the practical application of techniques and concepts learned in class throughout the software development process. Drawing on fundamental programming and software design principles, Python serves as the primary language, while the Pygame library facilitates graphical user interface development. The project employs data structures, such as queues for Breadth-First Search, demonstrating the application of class-learned algorithms. 
 
-In summary, the Maze Game project not only aims to provide entertainment but also serves as a tangible application of class-learned techniques and concepts in software development. Through this integration, the project seeks to reinforce programming principles and deliver an engaging and uplifting user experience.
+In summary, the Maze Game project not only aims to provide entertainment but also serves as a tangible application of class-learned techniques and concepts in software development and algorithm analysis. Through this integration, the project seeks to reinforce programming principles and deliver an engaging and uplifting user experience.
 
 
 
 
 ## Significance of the Project
 
-The Maze Game holds substantial significance within the context of Safe Space as it goes beyond being a mere source of entertainment. By integrating features designed to elevate user happiness, the project aligns with the core values of creating a safe and positive environment for users. In addition to providing a lighthearted activity, the game serves as a tool for relaxation and stress relief, fostering mental well-being.
+The Maze Game holds substantial significance within the context of Safe Space as it goes beyond being just a source of entertainment. By integrating features designed to elevate user happiness, the project aligns with the core values of creating a safe and positive environment for users. In addition to providing a lighthearted activity, the game serves as a tool for relaxation and stress relief, fostering mental well-being.
 
 The incorporation of jokes within the game becomes a powerful mechanism to infuse humor into the user experience. Humor has proven therapeutic effects, offering a natural and accessible means to alleviate stress and elevate mood. Through the delivery of jokes upon collecting packages, the Maze Game becomes more than just a maze-navigating adventure; it transforms into a source of joy and amusement, creating a dynamic and emotionally uplifting interaction for the players.
 
-Furthermore, the project's dual focus on user happiness and the practical application of class-learned techniques enhances its significance. By providing a tangible demonstration of programming and software development concepts, the Maze Game becomes not only a recreational activity but also an educational tool. Users engage with a product that not only entertains but also subtly educates, making it a valuable and holistic addition to the Safe Space platform.
+Furthermore, the project's dual focus on user happiness and the practical application of class-learned techniques enhances its significance. By providing a tangible demonstration of programming, algorithms, and software development concepts, the Maze Game becomes not only a recreational activity but also an educational tool. Users engage with a product that not only entertains but also subtly educates, making it a valuable and holistic addition to the Safe Space platform.
 
 In summary, the Maze Game contributes significantly to Safe Space by combining entertainment with mental well-being, offering users a delightful and educational experience. The integration of humor and the practical application of programming concepts enrich the overall impact of the project, aligning it with the goals of creating a positive and supportive space for users.
 
@@ -101,30 +101,60 @@ In summary, the Maze Game contributes significantly to Safe Space by combining e
 
 The Maze Game project is organized into a well-defined structure, comprising several key elements:
 
-```
-|-- MazeGame
-    |-- homePage.py
-    |-- maze.py
-    |-- instructions.py
-    |-- mazeRequirements.txt
-    |-- mazePic.jpeg
-    |-- README.md
-```
+1. **`homePage.py:`** This script serves as the control center for the game's home page. It manages buttons for initiating gameplay, exiting the application, and accessing instructions, providing users with a seamless interface.
+   - Import necessary libraries
+   - Initialize Pygame
+   - Define constants
+   - Define functions:
+     - `draw_home_page()`: Draw home page elements
+     - `handle_events()`: Handle user input and events on the home page
+   - Main loop:
+     - Draw home page
+     - Handle events
+     - Update display
+   - Clean up
 
 
-1. **homePage.py:** This script serves as the control center for the game's home page. It manages buttons for initiating gameplay, exiting the application, and accessing instructions, providing users with a seamless interface.
+2. **`maze.py:`** Responsible for the core functionalities, this script implements maze generation, the Breadth-First Search (BFS) pathfinding algorithm, and game logic governing the user's movement and interaction with packages. It forms the backbone of the gaming experience.
+   - Import necessary libraries
+   - Define constants
+   - Define functions:
+     - `generate_maze()`: Generate a maze
+     - `draw_maze()`: Draw the maze
+     - `bfs_pathfinding()`: Implement Breadth-First Search pathfinding algorithm
+     - `handle_user_input()`: Handle user movement and interaction with packages
+   - Main game loop:
+     - Generate maze
+     - Draw maze
+     - Perform BFS pathfinding
+     - Handle user input
+     - Update display
+   - Clean up
 
-2. **maze.py:** Responsible for the core functionalities, this script implements maze generation, the Breadth-First Search (BFS) pathfinding algorithm, and game logic governing the user's movement and interaction with packages. It forms the backbone of the gaming experience.
+3. **`instructions.py:`** Dedicated to offering clear guidance, this script displays instructions on how to play the game. It ensures that users have a comprehensive understanding of the game mechanics and objectives.
+   - Import necessary libraries
+   - Define constants
+   - Define functions:
+     - `display_instructions()`: Display game instructions
+     - `handle_events()`: Handle events to exit the instructions page
+   - Main loop:
+     - Display instructions
+     - Handle events
+     - Update display
+   - Clean up
 
-3. **instructions.py:** Dedicated to offering clear guidance, this script displays instructions on how to play the game. It ensures that users have a comprehensive understanding of the game mechanics and objectives.
 
-4. **mazeRequirements.txt:** This file consolidates all dependencies and installations required to run the application. It simplifies the setup process by providing a centralized list of prerequisites.
+4. **`mazeRequirements.txt:`** This file consolidates all dependencies and installations required to run the application. It simplifies the setup process by providing a centralized list of prerequisites.
 
-5. **mazePic.jpeg:** A visual element, this image serves as the background for the game, enhancing the overall aesthetic appeal and user experience.
+5. **`mazePic.jpeg:`** A visual element, this image serves as the background for the game, enhancing the overall aesthetic appeal and user experience.
 
-6. **README.md:** The project report which includes project goals, significance, installation and usage instructions, code structure, functionalities, and discussion points. This comprehensive document acts as a guide and reference for users and collaborators.
-
-The codebase features clear sections for Pygame setup, constant definitions, maze generation algorithms, user input handling, and the game loop. Each script fulfills a specific role, collectively contributing to the seamless functionality and structure of the Maze Game.
+6. **`README.md:`** The project report is a comprehensive document that acts as a guide and reference for users and collaborators.
+   - Project goals
+   - Significance of the project
+   - Installation and usage instructions
+   - Code structure
+   - List of functionalities and test results
+   - Discussion and conclusion
 
 
 
@@ -180,7 +210,7 @@ The Maze Game integrates various components to deliver a seamless and enjoyable 
   - **Clarity:** Verified instructions for clear and understandable guidance.
   - **Correctness:** Ensured that instructions accurately reflected game mechanics.
 
-Adam and Gabi performed various testing to guarantee the functionality of key features, the accuracy of provided instructions, and successful dependency management. All tests were successful, confirming a reliable and enjoyable user experience.
+We performed various testing to guarantee the functionality of key features, the accuracy of provided instructions, and successful dependency management. All tests were successful, confirming a reliable and enjoyable user experience.
 
 
 
