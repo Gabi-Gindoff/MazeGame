@@ -1,10 +1,10 @@
-import pygame
-import sys
-import random
-from queue import Queue
-import time
+import pygame  # Import the pygame library for game development
+import sys  # Import the sys module for system-specific functions
+import random  # Import the random module for random number generation
+from queue import Queue  # Import Queue class for BFS algorithm
+import time  # Import the time module for time-related functions
 
-# Constants
+# Constants for the game window dimensions, cell size, colors, and directions
 WIDTH, HEIGHT = 600, 600
 CELL_SIZE = 20
 ROWS, COLS = HEIGHT // CELL_SIZE, WIDTH // CELL_SIZE
@@ -18,27 +18,30 @@ WHITE, BLACK, RED, GREEN, BLUE, YELLOW = (
 )
 
 # Pygame setup
-pygame.init()
-screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Maze Solver")
+pygame.init()  # Initialize the pygame library
+screen = pygame.display.set_mode((WIDTH, HEIGHT))  # Set up the game window
+pygame.display.set_caption("Maze Solver")  # Set the window caption
 
-# Font setup
+# Font setup for displaying text on the screen
 font = pygame.font.Font(None, 25)
 
-# Maze generation with more dead ends
+
+# Function to generate the maze with more dead ends and packages
 def generate_maze():
     while True:
         maze = [[random.choices([0, 1], weights=[0.7, 0.3])[0] for _ in range(COLS)] for _ in range(ROWS)]
         maze[0][0] = maze[ROWS - 1][COLS - 1] = 0  # Start and end points are open
 
-        # Add packages (yellow squares)
+        # Add packages (yellow squares) to the maze
         for _ in range(11):  # You can adjust the number of packages
             package_row, package_col = random.randint(0, ROWS - 1), random.randint(0, COLS - 1)
             maze[package_row][package_col] = YELLOW
 
+        # Find a valid path using BFS algorithm
         path = bfs(maze)
         if path:
             return maze, path
+
 
 # BFS algorithm to find the path
 def bfs(maze):
@@ -95,19 +98,19 @@ def draw_path(path):
         for row, col in path:
             pygame.draw.rect(screen, GREEN, (col * CELL_SIZE, row * CELL_SIZE, CELL_SIZE, CELL_SIZE))
 
+
 # Game loop
-maze, ai_path = generate_maze()
-user_row, user_col = 0, 0
+maze, ai_path = generate_maze()  # Generate the maze and AI path
+user_row, user_col = 0, 0  # Initial position of the user
 user_moved = False  # Flag to check if the user moved
 ai_path_revealed = False  # Flag to check if the AI path is revealed
 victory = False  # Flag to check if the user reached the red square
-last_key_press_time = time.time()
+last_key_press_time = time.time()  # Track the time of the last key press
 packages_collected = 0  # Counter for the number of packages collected
 
 
 
-
-# Jokes and answers
+# List of jokes and answers for display when a package is collected
 jokes_and_answers = [
     ("Why did the computer keep its drink on the windowsill?", "Because it wanted a cold beverage!"),
     ("How do you comfort a JavaScript bug?", "You console it!"),
