@@ -250,4 +250,16 @@ We performed various testing to guarantee the functionality of key features, the
   - The ability to think critically and strategically is a valuable skill reinforced through the development process.
 
 
-In conclusion, the Maze Game project serves as a multifaceted learning experience, addressing both technical and problem-solving aspects. The identified issues present opportunities for future enhancements, and the application of course learnings highlights the practical and versatile nature of programming skills developed throughout the course. The project successfully aligns with the goals of Safe Space, providing an entertaining and educational tool for users.
+### Enhancing Happiness Through Gameplay:
+
+- **Humor Integration:**
+  - The incorporation of lighthearted jokes upon collecting packages adds a unique and joyful element to the Maze Game.
+  - Research suggests that humor has therapeutic effects, offering a natural and accessible means to alleviate stress and elevate mood.
+
+- **Challenging Gameplay:**
+  - The maze's dynamic and challenging nature contributes to a sense of accomplishment upon completing levels.
+  - Overcoming challenges in a game setting can trigger the release of endorphins, promoting a positive emotional experience for players.
+
+In conclusion, the Maze Game project not only serves as a multifaceted learning experience by addressing both technical and problem-solving aspects, but also as a source of entertainment and happiness for users. The identified issues present opportunities for future enhancements, and the application of course learnings highlights the practical and versatile nature of programming skills developed throughout the course. The combination of humor, challenges, and thoughtful game design aligns with Safe Space's mission, providing an engaging and uplifting experience.
+
+
