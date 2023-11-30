@@ -1,7 +1,7 @@
-import pygame
-import sys
+import pygame  # Import Pygame for game development
+import sys  # Import sys for system-specific parameters and functions
 
-# Constants
+# Constants for the screen/ display and colors
 WIDTH, HEIGHT = 600, 600
 CELL_SIZE = 20
 ROWS, COLS = HEIGHT // CELL_SIZE, WIDTH // CELL_SIZE
@@ -14,14 +14,14 @@ WHITE, BLACK, RED, GREEN, BLUE, YELLOW = (
     (255, 255, 0)
 )
 
-# Add a background image
-background_image = pygame.image.load("mazePic.jpeg")  # Replace "mazePic.jpeg" with your image file
+# Background image
+background_image = pygame.image.load("mazePic.jpeg") 
 background_image = pygame.transform.scale(background_image, (WIDTH, HEIGHT))
 
 # Pygame setup
-pygame.init()
-screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Instructions")
+pygame.init() # Initialize pygame
+screen = pygame.display.set_mode((WIDTH, HEIGHT)) # Initialize game window
+pygame.display.set_caption("Instructions") # Set window caption
 
 # Display background image
 screen.blit(background_image, (0, 0))
@@ -45,7 +45,7 @@ instructions = [
     "Press 'Quit' on the home page to exit the Application."
 ]
 
-# Display instructions
+# Display instructions using loop 
 for i, line in enumerate(instructions):
     text = font.render(line, True, BLACK)
     screen.blit(text, (WIDTH // 2 - text.get_width() // 2, HEIGHT // 4 + i * 25))
