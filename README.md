@@ -99,6 +99,10 @@ In summary, the Maze Game contributes significantly to Safe Space by combining e
 
 ## Code Structure
 
+<img width="912" alt="image" src="https://github.com/Gabi-Gindoff/MazeGame/assets/144366612/a6585c82-95b8-4a36-8977-a54e2ba71c4f">
+
+
+
 The Maze Game project is organized into a well-defined structure, comprising several key elements:
 
 1. **`homePage.py:`** This script serves as the control center for the game's home page. It manages buttons for initiating gameplay, exiting the application, and accessing instructions, providing users with a seamless interface.
